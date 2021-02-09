@@ -36,9 +36,10 @@ def generator(folder_name):
                 json_data['angle'] = new_angle
                 with open(new_json_path, 'w', encoding='utf-8') as f:
                     json.dump(json_data, f, ensure_ascii=False, indent=4)
-                print("Finished: " + os.path.basename(file_name))
+                # print("Finished: " + os.path.basename(file_name))
             except:
                 print('error: ' + file_name)
+    print(folder_name + ' finished')
 
 
 if __name__ == '__main__':

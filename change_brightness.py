@@ -6,6 +6,7 @@ from PIL import Image, ImageEnhance
 LIGHT_FACTOR = 1.5
 DARK_FACTOR = 0.5
 
+
 def change(folder_name):
     light_folder_name = folder_name + '-l'
     dark_folder_name = folder_name + '-d'
@@ -43,6 +44,7 @@ def change(folder_name):
                 new_img_path = dark_folder_name + \
                     '/' + json_data['cam/image_array']
                 img_dark.save(new_img_path)
-                print("Finished: " + os.path.basename(file_name))
+                # print("Finished: " + os.path.basename(file_name))
             except:
                 print('error: ' + file_name)
+    print(folder_name + ' finished')
