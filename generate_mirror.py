@@ -38,7 +38,10 @@ def generator(folder_name):
                     json.dump(json_data, f, ensure_ascii=False, indent=4)
                 # print("Finished: " + os.path.basename(file_name))
             except:
-                print('error: ' + file_name)
+                if os.path.basename(file_name) == 'meta.json':
+                    print('skipping: ' + file_name)
+                else:
+                    print('error: ' + file_name)
     print(folder_name + ' finished')
 
 

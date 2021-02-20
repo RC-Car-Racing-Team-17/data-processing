@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 '''
 Usage: 
-    main.py [--m] [--b]
+    main.py [--m] [--b] [--s]
 '''
 import os
 import time
+import sys
 from PIL import Image
 from docopt import docopt
 from multiprocessing import Process, Pool, cpu_count
 import generate_mirror
 import change_brightness
+import random_shadow
 
-PATH = '../autorace/data/'
+
+# PATH = '../autorace/data/'
+PATH = 'test'
 
 
 def get_path_list(path):
@@ -33,6 +37,8 @@ if __name__ == '__main__':
         pool.map(generate_mirror.generator, path_list)
     elif args['--b']:
         pool.map(change_brightness.change, path_list)
+    elif args['--s']:
+        pool.map(random_shadow.generator, path_list)
     pool.close()
     pool.join()
     end_time = time.time()

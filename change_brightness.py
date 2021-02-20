@@ -48,3 +48,6 @@ def change(folder_name):
             except:
                 print('error: ' + file_name)
     print(folder_name + ' finished')
+
+def random_change(folder_name):
+    pass

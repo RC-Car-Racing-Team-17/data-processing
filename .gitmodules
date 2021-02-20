@@ -1,0 +1,3 @@
+[submodule "Automold"]
+	path = Automold
+	url = https://github.com/RC-Car-Racing-Team-17/Automold--Road-Augmentation-Library.git
