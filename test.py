@@ -1,18 +1,3 @@
-from multiprocessing import Pool
-
-foo = {1: []}
-
-def f(x):
-    print('mid')
-    return x
-
-def main():
-    pool = Pool()
-    foo[1] = pool.map(f, range(100))
-    pool.close()
-    pool.join()
-    print('finished')
-    print(foo)
-
-if __name__ == '__main__':
-    main()
+img_path = "D:/Desktop/RC-Car/autorace/data/tub_63_21-02-18-s/1_cam-image_array_.jpg"
+from matplotlib import pyplot as plt
+plt.imshow(plt.imread(img_path))
