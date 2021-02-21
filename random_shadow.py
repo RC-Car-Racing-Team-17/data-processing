@@ -29,8 +29,7 @@ def generator(folder_name):
             # generate random shadow in new image
             img_path = os.path.join(
                 folder_name, json_data['cam/image_array'])
-            img_obj = cv2.cvtColor(
-                cv2.imread(img_path), cv2.COLOR_BGR2RGB)
+            img_obj = cv2.imread(img_path)
             img_shadow = am.add_shadow(img_obj)
             new_img_path = os.path.join(
                 new_folder_name, json_data['cam/image_array'])

@@ -1,0 +1,11 @@
+{
+    "cam/image_array": "8_cam-image_array_.jpg",
+    "user/angle": 1.0,
+    "user/throttle": 0.6,
+    "user/mode": "user",
+    "user/angle_noise": -0.012,
+    "user/throttle_noise": 0.012,
+    "angle": 0.988,
+    "throttle": 0.612,
+    "milliseconds": 62948
+}
